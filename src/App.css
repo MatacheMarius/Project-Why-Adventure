@@ -6,7 +6,6 @@
 }
 
 .home,
-.services,
 .products,
 .sign-up {
   display: flex;
@@ -21,8 +20,8 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  color: #fff;
-  font-size: 100px;
+  color:black;
+  height: 90vh;
 }
 
 .products {
@@ -41,4 +40,26 @@
   background-repeat: no-repeat;
   color: #fff;
   font-size: 100px;
+}
+
+.how{
+  margin-top:10px;
+  margin-left: 10px;
+  text-align: center;
+  opacity: .3 ;
+}
+
+.why{
+  margin-top:10px;
+  margin-right: 10px;
+  text-align: center;
+  opacity: .3 ;
+}
+
+.featured{
+  background-color: whitesmoke;
+  text-align: center;
+  color:black;
+  padding-top: 70px;
+  padding-bottom: 70px;
 }
