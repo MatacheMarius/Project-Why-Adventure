@@ -5,7 +5,7 @@ import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Mission from './components/pages/Mission';
 import SignUp from './components/pages/SignUp';
-import Guides from './components/pages/Guides';
+import Profile from './components/pages/Profile';
 import Map from './components/pages/Map';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -19,7 +19,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/mission' component={Mission} />
           <Route path='/sign-up' component={SignUp} />
-          <Route path='/guides' component={Guides} />
+          <Route path='/profile' component={Profile} />
         </Switch>
       </Router>
     </>
