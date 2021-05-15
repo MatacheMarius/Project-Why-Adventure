@@ -13,7 +13,7 @@ function Cards() {
               src='images/img-9.jpg'
               text='Come with us to discover the world'
               label='Adventure'
-              path='/services'
+              path='/mission'
             />
             <CardItem
               src='images/img-1.jpg'
@@ -27,20 +27,20 @@ function Cards() {
               src='images/img-3.jpg'
               text='Do you like mystery? Come with us in a BLIND TRIP'
               label='Mystery'
-              path='/services'
+              path='/mission'
             />
           
             <CardItem
               src='images/img-8.jpg'
               text="Dou like new experiences? let's see what you can do."
               label='Adrenaline'
-              path='/service'
+              path='/mission'
             />
              <CardItem
                src='images/img-2.jpg'
                text='Discover new friends'
                label='Friends'
-               path='/services'
+               path='/mission'
             />
           </ul>
         </div>
