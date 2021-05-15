@@ -3,7 +3,7 @@ import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Services from './components/pages/Services';
+import Mission from './components/pages/Mission';
 import SignUp from './components/pages/SignUp';
 import Profile from './components/pages/Profile';
 import Map from './components/pages/Map';
@@ -17,7 +17,7 @@ function App() {
         <Switch>
         <Route path='/Map' component={Map} />
           <Route path='/' exact component={Home} />
-          <Route path='/services' component={Services} />
+          <Route path='/mission' component={Mission} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/profile' component={Profile} />
         </Switch>

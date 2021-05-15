@@ -8,7 +8,11 @@ function Home() {
   return (
     <>
       <HeroSection />
-      <Cards />
+      <div className="featured">
+        <div className="container trips">
+          <Cards/>
+        </div>
+      </div>
       <Footer />
     </>
   );
