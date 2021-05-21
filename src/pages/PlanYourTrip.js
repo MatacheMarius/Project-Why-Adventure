@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react';
-import '../../App.css';
-import getInfo from '../../utils/API';
+import '../App.css';
+import getInfo from '../utils/API';
 import {CardDeck} from 'react-bootstrap';
-import GuideCards from '../Guide';
+import GuideCards from '../components/GuideCard';
 
 
 export default function Map() {
