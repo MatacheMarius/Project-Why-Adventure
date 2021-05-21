@@ -1,7 +1,7 @@
 import React from 'react';
-import '../../App.css';
-import FavoriteAdventureCard from '../FavoriteAdventureCard'
-import BookedAdventureCard from '../BookedAdventureCard'
+import '../App.css';
+import FavoriteAdventureCard from '../components/FavoriteAdventureCard'
+import BookedAdventureCard from '../components/BookedAdventureCard'
 
 export default function Profile() {
   return (
