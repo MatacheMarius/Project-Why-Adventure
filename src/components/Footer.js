@@ -25,69 +25,69 @@ function Footer() {
           </form>
         </div>
       </section>
-      <div className='footer-links'>
+      <div class='footer-links'>
         <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
+          <div class='footer-link-items'>
             <h2>About Us</h2>
             <Link to='/mission'>How it works</Link>
           </div>
         </div>
         <div className='footer-link-wrapper'>
-          <div className='footer-link-items'>
+          <div class='footer-link-items'>
             <h2>Videos</h2>
             <Link to='/'>Submit Video</Link>
             <Link to='/'>Ambassadors</Link>
           </div>
         </div>
       </div>
-      <section className='social-media'>
-        <div className='social-media-wrap'>
-          <div className='footer-logo'>
+      <section class='social-media'>
+        <div class='social-media-wrap'>
+          <div class='footer-logo'>
             <Link to='/' className='social-logo'>
             DCR Adventures
-              <i className='fab fa-typo3' />
+              <i class='fab fa-typo3' />
             </Link>
           </div>
-          <div className='social-icons'>
+          <div class='social-icons'>
             <Link
-              className='social-icon-link facebook'
+              class='social-icon-link facebook'
               to='/'
               target='_blank'
               aria-label='Facebook'
             >
-              <i className='fab fa-facebook-f' />
+              <i class='fab fa-facebook-f' />
             </Link>
             <Link
-              className='social-icon-link instagram'
+              class='social-icon-link instagram'
               to='/'
               target='_blank'
               aria-label='Instagram'
             >
-              <i className='fab fa-instagram' />
+              <i class='fab fa-instagram' />
             </Link>
             <Link
-              className='social-icon-link youtube'
+              class='social-icon-link youtube'
               to='/'
               target='_blank'
               aria-label='Youtube'
             >
-              <i className='fab fa-youtube' />
+              <i class='fab fa-youtube' />
             </Link>
             <Link
-              className='social-icon-link twitter'
+              class='social-icon-link twitter'
               to='/'
               target='_blank'
               aria-label='Twitter'
             >
-              <i className='fab fa-twitter' />
+              <i class='fab fa-twitter' />
             </Link>
             <Link
-              className='social-icon-link twitter'
+              class='social-icon-link twitter'
               to='/'
               target='_blank'
               aria-label='LinkedIn'
             >
-              <i className='fab fa-linkedin' />
+              <i class='fab fa-linkedin' />
             </Link>
           </div>
         </div>
