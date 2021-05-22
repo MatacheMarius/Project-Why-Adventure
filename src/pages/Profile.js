@@ -1,23 +1,34 @@
-import React from 'react';
-import '../App.css';
-import FavoriteAdventureCard from '../components/FavoriteAdventureCard'
-import BookedAdventureCard from '../components/BookedAdventureCard'
+import React, { useState, useEffect } from "react";
+import DeleteBtn from "../components/DeleteBtn";
+import FavoriteAdventureCard from "../components/FavoriteAdventureCard";
+import BookedAdventureCard from "../components/BookedAdventureCard";
+import { Row, Col } from "react-bootstrap";
+ 
 
-export default function Profile() {
+export default function Trips() {
+  // Setting our component's initial state
+  // const [trips, setTrips] = useState([])
+  // const [formObject, setFormObject] = useState({})
+
+
+
   return (
-    <div>
-      <div className="container mt-2">
-        <div className="row">
-          <div className="col-6">
-            <h1>Booked Adventures</h1>
-            <BookedAdventureCard />
-          </div>
-          <div className="col-6">
-            <h1>Favorite Adventures</h1>
-            <FavoriteAdventureCard />
-          </div>
-        </div>
+    <Row>
+    <Col>
+      <div>
+        <h1>Booked Adventures</h1>
+          <BookedAdventureCard />
       </div>
+    </Col>
+    <div class="col-md-1">
     </div>
+    <Col>     
+      <div>
+        <h1>Favorite Adventures</h1>
+         <FavoriteAdventureCard />
+        </div>
+    </Col> 
+    
+  </Row>
   )
 }

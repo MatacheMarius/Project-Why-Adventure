@@ -1,19 +1,44 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
+import getInfo from '../../utils/API';
+import {Card, CardDeck} from 'react-bootstrap';
+import GuideCards from '../GuideCard';
 
-function FavoriteAdventureCard(props) {
+
+function FavoriteAdventureCard() {
+  const [guide, setAllGuides] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+ 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+
+   
+    
+    useEffect(() => {
+    getInfo()
+    .then(response => {
+      if(response.data){
+      setAllGuides(response.data.data)
+      setIsLoading(false);}
+      
+    })
+    .catch(error=> console.log(error));
+    
+    }, [])
+
+  console.log(guide);
+
   return (
-    <div>
-        <h1>This is a Booked Adventure Card</h1>
-        <div className="card" style={{ width: '18rem' }}>
-            <img className="card-img-top" src="..." alt="Card image cap" />
-            <div className="card-body">
-                <h5 className="card-title">Destination Name</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" className="btn btn-primary">Go somewhere</a>
-            </div>
-        </div>
-    </div> 
+    <div >
+    <CardDeck className="row " >
+    {isLoading ? 'Loading' : 
+    guide.map((el, index) => {
+    return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name}>
+      </GuideCards>} 
+    ) } 
+    
+    </CardDeck>
+  </div>
   );
 }
+
 
 export default FavoriteAdventureCard;
