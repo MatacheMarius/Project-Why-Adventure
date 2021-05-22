@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DeleteBtn from "../components/DeleteBtn";
+// import DeleteBtn from "../components/DeleteBtn";
 import FavoriteAdventureCard from "../components/FavoriteAdventureCard";
 import BookedAdventureCard from "../components/BookedAdventureCard";
 import { Row, Col } from "react-bootstrap";
