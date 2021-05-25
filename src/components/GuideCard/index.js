@@ -1,6 +1,6 @@
 import React from "react";
 import {Card} from 'react-bootstrap';
-import {CardDeck} from 'react-bootstrap';
+  
 
 
   function GuideCards(props) {
@@ -8,10 +8,10 @@ import {CardDeck} from 'react-bootstrap';
    
         return (
            
-            <Card className ="col-4  ">
+            <Card className ="col-4" >
               <Card.Img variant="top" src={props.images} style={{height: '200px'}} />
               <Card.Body>
-                <Card.Title>{props.name}</Card.Title>
+                <Card.Title  onClick = {props.showModal} > <h1>{props.name} </h1></Card.Title>
                 <Card.Text>{props.description}</Card.Text>
               </Card.Body>
               <Card.Footer>
