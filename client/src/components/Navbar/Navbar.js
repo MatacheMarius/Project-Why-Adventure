@@ -29,7 +29,7 @@ function Navbar() {
       <nav className='navbar'>
         <div className='navbar-container'>
           <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-          DCR Adventures
+          Why Adventure
             <i class='fab fa-typo3' />
           </Link>
           <div className='menu-icon' onClick={handleClick}>
@@ -45,7 +45,7 @@ function Navbar() {
               <Link to='/PlanYourTrip' className='nav-links' onClick={closeMobileMenu}>Plan Your Trip</Link>
             </li>
             <li>
-              <Link to='/trips' className='nav-links' onClick={closeMobileMenu}>Saved Trips</Link>
+              <Link to='/profile' className='nav-links' onClick={closeMobileMenu}>Profile</Link>
             </li>
             <li className='nav-item'>
             <Link to='/mission'className='nav-links' onClick={closeMobileMenu}>Mission</Link>
