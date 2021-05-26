@@ -20,6 +20,11 @@ const UserSchema = new mongoose.Schema(
       required: true,
       min: 6,
     },
+    // isGuide: {
+    //   type: Boolean,
+    //   require: true, 
+    // }
+    //NOTE FROM CONOR: We could also do this if we want guides to be real users?
   },
   { timestamps: true }
 );
