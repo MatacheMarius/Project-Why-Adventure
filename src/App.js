@@ -8,6 +8,7 @@ import SignUp from './pages/SignUp';
 import Profile from './pages/Profile';
 import PlanYourTrip from './pages/PlanYourTrip';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Account from "./pages/Account";
 // import axios from "axios";
 // import getInfo from './utils/API';
 
@@ -22,7 +23,8 @@ function App() {
         <Navbar />
         <Switch>
           <Route path='/' exact component={Home} />
-          <Route path='/PlanYourTrip' component={PlanYourTrip} />
+          <Route path='/Account' component={Account} />
+         <Route path='/PlanYourTrip' component={PlanYourTrip} />
           <Route path='/mission' component={Mission} />
           <Route path='/sign-up' component={SignUp} />
           <Route path='/profile' component={Profile} />
@@ -35,3 +37,7 @@ function App() {
 
 
 export default App;
+
+
+
+
