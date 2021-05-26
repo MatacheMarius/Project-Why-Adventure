@@ -1,6 +1,5 @@
 import React from "react";
 import {Card} from 'react-bootstrap';
-import {CardDeck} from 'react-bootstrap';
 
 
   function GuideCards(props) {

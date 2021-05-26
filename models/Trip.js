@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const tripSchema = new mongoose.Schema(
+const tripSchema = new Schema(
   {
     username: {
       type: String,
@@ -22,13 +22,9 @@ const tripSchema = new mongoose.Schema(
       min: 0,
       max: 75,
     },
-    long: {
-      type: Number,
-      required: false,
-    },
-    lat: {
-      type: Number,
-      required: falst,
+    date: { 
+      type: Date, 
+      default: Date.now,
     },
     booked: {
       type: Boolean,
@@ -39,7 +35,6 @@ const tripSchema = new mongoose.Schema(
       required: true,
     },
   },
-  { timestamps: true }
 );
 
 const Trip = mongoose.model("Trip", tripSchema)

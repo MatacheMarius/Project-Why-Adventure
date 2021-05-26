@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import Navbar from './components/Navbar/Navbar';
 import './App.css';
 import Home from './pages/Home';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Mission from './pages/Mission';
 import SignUp from './pages/SignUp';
-import Profile from './pages/Profile';
+import Trips from './pages/Trips';
 import PlanYourTrip from './pages/PlanYourTrip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 // import axios from "axios";
@@ -25,7 +25,7 @@ function App() {
           <Route path='/PlanYourTrip' component={PlanYourTrip} />
           <Route path='/mission' component={Mission} />
           <Route path='/sign-up' component={SignUp} />
-          <Route path='/profile' component={Profile} />
+          <Route path='/trips' component={Trips} />
         </Switch>
       </Router>
     </>
