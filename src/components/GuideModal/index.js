@@ -35,9 +35,7 @@ function EmployeeModal(props) {
                 <Button variant="success"  >
                     Book!
                 </Button>
-                <Button variant="danger" >
-                    Add to Favorites
-                </Button>
+               
             </Modal.Footer>
         </Modal>
     );
