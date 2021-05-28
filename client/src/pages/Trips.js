@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import FavoriteAdventureCard from "../components/FavoriteAdventureCard";
+import { FavoriteAdventureCard, FavoriteDeck } from "../components/FavoriteAdventureCard";
 import DeleteBtn from "../components/DeleteBtn";
 import { BookedAdventureCard, BookedDeck } from "../components/BookedAdventureCard"
 import tripsAPI from "../utils/tripsAPI";
@@ -60,6 +60,8 @@ function Trips() {
               {trips.length ? (
                 <BookedDeck>
                   {trips.map(trip => (
+                    <div>
+                    {trip.booked === true && (
                     <BookedAdventureCard key={trip._id}>
                       <p>
                         {trip.username} booked a trip to {trip.location}
@@ -69,6 +71,8 @@ function Trips() {
                       </p>
                     <DeleteBtn onClick={() => deleteTrip(trip._id)} />    
                   </BookedAdventureCard>
+                  )}
+                  </div>
                   ))}
                 </BookedDeck>
               ) : (
@@ -78,12 +82,33 @@ function Trips() {
     </Col>
     <div class="col-md-1">
     </div>
-    <Col>     
-      <div>
-        <h1>Favorite Adventures</h1>
-        <FavoriteAdventureCard />
-      </div>
-    </Col> 
+    <Col>
+        <div>
+          <h1>Favorited Adventures</h1>
+            
+              {trips.length ? (
+                <FavoriteDeck>
+                  {trips.map(trip => (
+                    <div>
+                    {trip.favorited === true && (
+                    <FavoriteAdventureCard key={trip._id}>
+                          <p>
+                            {trip.username} favorited a trip to {trip.location}
+                          </p>
+                          <p>
+                            {trip.desc}
+                          </p>
+                      <DeleteBtn onClick={() => deleteTrip(trip._id)} /> 
+                    </FavoriteAdventureCard>
+                    )}
+                    </div>
+                    ))}
+                </FavoriteDeck>
+              ) : (
+              <h3>No trips to display</h3>
+            )}
+        </div>
+    </Col>
   
   </Row>
   );
