@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import getInfo from '../../utils/API';
-import {Card, CardDeck} from 'react-bootstrap';
+import {CardDeck} from 'react-bootstrap';
 import GuideCards from '../GuideCard';
 
 
