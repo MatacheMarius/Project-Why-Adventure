@@ -9,7 +9,7 @@ export default function Mission() {
           <div className="card how">
             <div className="card-header">
               <h2>How We Do It</h2>
-              <blockquote class="blockquote">
+              <blockquote className="blockquote">
                 <p className="">“Not all those who wander are lost.”</p>
                 <footer className="blockquote-footer">J.R.R. Tolkien</footer>
               </blockquote>
