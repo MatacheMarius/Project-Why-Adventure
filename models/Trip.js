@@ -5,20 +5,20 @@ const tripSchema = new Schema(
   {
     username: {
       type: String,
-      required: true,
+      
     },
     guide: {
       type: Boolean,
-      required: true,
+     
     },
     desc: {
       type: String,
-      required: false,
+ 
       min: 3,
     },
     location: {
       type: String,
-      required: true,
+     
       min: 0,
       max: 75,
     },
@@ -28,12 +28,32 @@ const tripSchema = new Schema(
     },
     booked: {
       type: Boolean,
-      required: true,
+     
     },
     favorited: {
       type: Boolean,
-      required: true,
+
     },
+    firstName: {
+      type: String,
+    },
+    lastName: {
+      type: String,},
+    gender: {
+          type: String,
+         },
+    experience: {
+          type: String,
+         },
+    cell: {
+          type: String,
+         },
+    email:{
+          type: String,
+         }
+
+    
+
   },
 );
 

@@ -1,10 +1,41 @@
 import React from "react";
 import { Button, Modal } from "react-bootstrap";
+import tripsAPI from "../../utils/tripsAPI";
 
 import "./style.css"
 
 
 function EmployeeModal(props) {
+
+    const showGuide = () => {
+       saveGuide()
+       props.handleClose()
+        }
+     
+     
+       const tripData = {
+         firstName: props.namef,
+         lastName: props.namel,
+         gender: props.gender,
+         experience: props.experience,
+         cell: props.cell,
+         email: props.email
+       }
+
+     
+      
+     
+       function saveGuide() {
+         tripsAPI.saveTrip(tripData)
+         .then((res) => {
+           console.log(res.data)})
+           .catch(err => console.log(err));
+           
+       };
+     
+
+       console.log(tripData)
+
 
     return ( 
         
@@ -32,7 +63,7 @@ function EmployeeModal(props) {
             <Button variant="warning"  onClick = {props.next}>
                     Next Guide
                 </Button>
-                <Button variant="success"  >
+                <Button variant="success" onClick = {showGuide}  >
                     Book!
                 </Button>
                

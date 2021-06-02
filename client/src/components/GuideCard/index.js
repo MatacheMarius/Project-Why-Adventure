@@ -1,10 +1,53 @@
 import React from "react";
 import {Card, Button} from 'react-bootstrap';
-  
+import tripsAPI from "../../utils/tripsAPI";
 
 
   function GuideCards(props) {
-  
+
+  const showBooked = () => {
+   saveTrips();
+   props.showModal()
+  }
+
+  const showFavorited= () => {
+    favoriteTrips();  
+    
+   }
+
+
+  const tripData = {
+    username: props.name,
+    desc: props.description,
+    booked: true,
+  }
+
+  const tripFavorited  = {
+    username: props.name,
+    desc: props.description,
+    favorited: true,
+  }
+
+ 
+
+  function saveTrips() {
+    tripsAPI.saveTrip(tripData)
+    .then((res) => {
+      console.log(res.data)})
+      .catch(err => console.log(err));
+      
+  };
+
+
+
+
+  function favoriteTrips() {
+    tripsAPI.saveTrip(tripFavorited)
+    .then((res) => {
+      console.log(res.data)})
+      .catch(err => console.log(err));
+      
+  };
    
         return (
            
@@ -17,10 +60,10 @@ import {Card, Button} from 'react-bootstrap';
               <Card.Footer>
                {props.regulation}
               </Card.Footer>
-              <Button variant="success" onClick = {props.showModal} >
+              <Button variant="success"  onClick = {showBooked} >
                     Book!
                 </Button>
-                <Button variant="danger"onClick = {props.showModal} >
+                <Button variant="danger"onClick = {showFavorited} >
                     Add to Favorites
                 </Button>
             </Card>
