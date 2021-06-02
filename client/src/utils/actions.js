@@ -1,0 +1,6 @@
+export const LOAD_BOOKS = "LOAD_BOOKS"
+export const ADD_BOOK = "ADD_BOOKS"
+export const LOGIN = "LOGIN"
+export const LOGOUT = "LOGOUT"
+export const ERROR = "ERROR"
+export const CLOSE_ALERT = "CLOSE_ALERT"
