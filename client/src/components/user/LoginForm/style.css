@@ -1,0 +1,37 @@
+.login-form {
+  
+    font-size: 1rem;
+    text-align: start;
+    width: 80%;
+    margin-bottom: 1rem;
+    color: #fff;
+    margin-left: 1mm;
+  }
+
+  .btn-prim {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      #000000d0 0%,
+      #000000d0 100%
+    );
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+

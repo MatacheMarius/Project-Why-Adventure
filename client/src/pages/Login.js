@@ -3,7 +3,9 @@ import { useHistory } from 'react-router-dom';
 import { login, loginValidate } from "../utils/userapi";
 import { useLoginContext } from '../utils/GlobalState';
 import { ERROR, LOGIN } from "../utils/actions"
-import LoginForm from "../components/user/LoginForm"
+import LoginForm from "../components/user/LoginForm/index"
+import './Login.css';
+
 //import validate from "../components/user/LoginForm/validate"
 
 function Login(callback) {
@@ -76,8 +78,11 @@ function Login(callback) {
     }
 
     return (
-        <div>
-            <div className="row px-3">
+        <div  className="picture">
+        <div className="form-container">
+        <div className="row px-4">
+
+            <div className="content">
                 {state.user.user_id ? <h1>You are logged in!</h1> : <h1>You're not logged in!</h1>}
                 <div className="col-md-6">
                     <h2>Login</h2>
@@ -90,6 +95,8 @@ function Login(callback) {
                 {/* //{!errors ? <p></p>: <h4></h4> } */}
                 <h4>Don't have an account? <a href="/signup">Sign Up Now!</a></h4>
             </div>
+            </div>
+        </div>
         </div>
     )
 }

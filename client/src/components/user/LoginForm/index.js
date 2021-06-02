@@ -1,8 +1,10 @@
 import React from "react";
+import './style.css';
+
 
 function LoginForm(props, callback, validate) {
   return (
-    <form className="form login-form">
+    <div className="login-form">
         <div className="form-group">
             <label htmlFor="email-login">email:</label>
             <input className="form-control" type="text" id="email-login" ref={props.loginEmailRef} />
@@ -12,9 +14,9 @@ function LoginForm(props, callback, validate) {
             <input className="form-control" type="password" id="password-login" ref={props.loginPasswordRef} />
         </div>
         <div className="form-group">
-            <button className="btn btn-primary" type="submit" onClick={props.handleLogin}>login</button>
+            <button className="btn-prim" type="submit" onClick={props.handleLogin}>Login</button>
         </div>
-    </form>                                         
+    </div>      
   );
 }
 

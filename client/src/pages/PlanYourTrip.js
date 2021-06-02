@@ -18,7 +18,7 @@ export default function Map() {
   const [randomGuides, setAllRandomGuides] = useState(null);
   const [isLoading2, setIsLoading2] = useState(true);
   const [nextGuide, getNextGuide] = useState(false);
-  const handleClose = () => setIsOpen(false);
+  const handleClose = () => (false);
   const showModal = () => {setIsOpen(true); }
   const gotNextGuide = () => getNextGuide(!nextGuide)
 

@@ -16,7 +16,7 @@ function SignUpForm(props) {
             <input className="form-control" type="password" id="password-signup" ref={props.signupPasswordRef} />
         </div>
         <div className="form-group">
-            <button className="btn btn-primary" type="submit" onClick={props.handleSignup}>signup</button>
+            <button className="btn-prim" type="submit" onClick={props.handleSignup}>Signup</button>
         </div>
     </form>                                   
   );
