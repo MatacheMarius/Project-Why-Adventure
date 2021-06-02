@@ -8,6 +8,7 @@ import {  Form } from "react-bootstrap";
 import axios from "axios";
 
 
+
 export default function Map() {
   
   const [input, setInput] = useState(null);
@@ -21,7 +22,9 @@ export default function Map() {
   const showModal = () => {setIsOpen(true); }
   const gotNextGuide = () => getNextGuide(!nextGuide)
 
+
   const getInfo = () => {
+
 
     var options = {
       method: 'GET',
@@ -58,7 +61,6 @@ export default function Map() {
         if(response.data){
         setAllRandomGuides(response.data.results)
         setIsLoading2(false);
-        console.log(response.data.results)
      
       }
         
@@ -68,7 +70,7 @@ export default function Map() {
       },  [isOpen, nextGuide])
 
 
-console.log(isOpen)
+      console.log(guide);
 
 return (
     <div>
@@ -149,7 +151,7 @@ return (
           <CardDeck className="row " >
           {isLoading ? 'Loading' : 
           guide.map((el, index) => {
-          return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} description = {el.description}  regulation = {el.regulationsOverview} showModal = {showModal}/> }
+          return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} description = {el.description}  regulation = {el.regulationsOverview} showModal = {showModal} /> }
           ) } 
           </CardDeck>
           

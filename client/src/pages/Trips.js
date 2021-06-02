@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import FavoriteAdventureCard from "../components/FavoriteAdventureCard";
 import DeleteBtn from "../components/DeleteBtn";
 import { BookedAdventureCard, BookedDeck } from "../components/BookedAdventureCard"
 import tripsAPI from "../utils/tripsAPI";
-import { Row, Col } from "react-bootstrap";
+import { Row, Col, Card } from "react-bootstrap";
 import { useLoginContext } from "../utils/GlobalState";
  
 
@@ -33,73 +32,72 @@ function Trips() {
     .then(res => loadTrips())
     .catch(err => console.log(err));
   }
-  // FOR SANDU
-
-  // function handleInputChange(event) {
-  //   const { name, value } = event.target;
-  //   setFormObject({...formObject, [name]: value})
-  // };
-
-  // // When the form is submitted, use the API.saveBook method to save the book data
-  // // Then reload books from the database
-  // function handleFormSubmit(event) {
-  //   event.preventDefault();
-  //   if (formObject.username && formObject.desc) {
-  //     API.saveBook({
-  //       title: formObject.username,
-  //       author: formObject.desc,
-  //       synopsis: formObject.guide
-  //     })
-  //       .then(res => loadTrips())
-  //       .catch(err => console.log(err));
-  //   }
-  // };
 
 
 
   return ( 
+   
     <Row>
+       
       <div>
+     
         {/* if the user is logged in, render: */}
         {state.user.user_id ?
+        
           <div>
             {/* ASK A TA: when I hit refresh, it clears out name? */}
             {state.user.user_id ? <h1>Welcome back, {state.user.username}</h1> : <h1>You're not logged in!</h1>}
             <Col>
               <div>
-                <h1>Booked Adventures</h1>
-                    {trips.length ? (
+                <h2>Booked Adventures</h2>
+                    {trips.length ? ( 
                       <BookedDeck>
-                        {trips.map(trip => (
+                        {trips.map(trip => ( trip.booked?
                           <BookedAdventureCard key={trip._id}>
-                            <p>
-                              {trip.username} booked a trip to {trip.location}
-                            </p>
+                            <h1>
+                            {trip.username}
+                            </h1>
                             <p>
                               {trip.desc}
                             </p>
                           <DeleteBtn onClick={() => deleteTrip(trip._id)} />    
                         </BookedAdventureCard>
-                        ))}
+                        : null))}
+                        
                       </BookedDeck>
                     ) : (
                     <h3>No trips to display</h3>
                   )}
               </div>
-            </Col>
-            <div class="col-md-1">
-            </div>
-            <Col>     
+             </Col>
+             <Col>
               <div>
-                <h1>Favorite Adventures</h1>
-                <FavoriteAdventureCard />
-              </div>
-            </Col> 
-          </div>
-          // if the user is logged out, render:
-          : <h4>Login to see where you're going next!</h4>}
+              
+                <h2>Favorite Adventures</h2>
+                {trips.length ? ( <BookedDeck> 
+                  {trips.map(trip => ( trip.favorited?
+                    <BookedAdventureCard key={trip._id}>
+                      <Card>
+                       <Card.Title> <h1>{trip.username} </h1></Card.Title>
+                       <Card.Text>{trip.desc}</Card.Text>
+                    <DeleteBtn onClick={() => deleteTrip(trip._id)} />  
+                    </Card>  
+                  </BookedAdventureCard>
+                  : null ))}
+                </BookedDeck>
+              ) : (
+              <h3>No trips to display</h3>
+            )}
       </div>
-    </Row>
+      </Col>
+      </div>
+   
+               
+          : <h4>Login to see where you're going next!</h4>}
+     
+     </div>
+
+     </Row>
   );
 }
 
