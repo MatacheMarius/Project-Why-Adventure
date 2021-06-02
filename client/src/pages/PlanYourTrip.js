@@ -8,7 +8,6 @@ import {  Form } from "react-bootstrap";
 import axios from "axios";
 
 
-
 export default function Map() {
   
   const [input, setInput] = useState(null);
@@ -147,10 +146,9 @@ return (
           <CardDeck className="row " >
           {isLoading ? 'Loading' : 
           guide.map((el, index) => {
-          return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} description = {el.description}  regulation = {el.regulationsOverview} showModal = {showModal} /> }
+          return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} description = {el.description}  regulation = {el.regulationsOverview} showModal = {showModal}  /> }
           ) } 
           </CardDeck>
-          
           {isLoading2 ? 'Loading' : 
           randomGuides.map((el = 2, index) => {
             return < EmployeeModal key ={index} isOpen = {isOpen}   image = {el.picture.large}  namef = {el.name.first} namel = {el.name.last} gender = {el.gender} age={el.dob.age} experience = {el.registered.age} cell={el.cell}  email={el.email} handleClose = {handleClose} next = {gotNextGuide} />  })

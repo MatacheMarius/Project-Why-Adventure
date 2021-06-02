@@ -18,6 +18,7 @@
     "url": "git+https://github.com/MatacheMarius/Project-Why-Adventure.git"
   },
   "dependencies": {
+    "@wojtekmaj/react-daterange-picker": "^3.2.0",
     "bcrypt": "^5.0.1",
     "concurrently": "^6.2.0",
     "connect-mongodb-session": "^2.4.1",
@@ -25,7 +26,8 @@
     "express-session": "^1.17.2",
     "if-env": "^1.0.4",
     "mongoose": "^5.12.10",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "react-date-picker": "^8.2.0"
   },
   "keywords": [],
   "author": "",
