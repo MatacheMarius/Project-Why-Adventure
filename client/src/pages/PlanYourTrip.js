@@ -18,8 +18,8 @@ export default function Map() {
   const [randomGuides, setAllRandomGuides] = useState(null);
   const [isLoading2, setIsLoading2] = useState(true);
   const [nextGuide, getNextGuide] = useState(false);
-  const handleClose = () => (false);
-  const showModal = () => {setIsOpen(true); }
+  const handleClose = () => setIsOpen(false);
+  const showModal = () => {setIsOpen(true); } 
   const gotNextGuide = () => getNextGuide(!nextGuide)
 
 
@@ -140,11 +140,7 @@ return (
             </Form.Group>
           </Form>
         </div>
-          <CardDeck className="row " >
-            {isLoading ? 'Loading' : guide.map((el, index) => {
-            return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} description = {el.description}  regulation = {el.regulationsOverview} /> }
-            )} 
-          </CardDeck>
+          
         </div> 
         
         <div >
