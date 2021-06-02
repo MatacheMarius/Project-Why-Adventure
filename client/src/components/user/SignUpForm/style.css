@@ -1,0 +1,15 @@
+.btn-prim {
+    width: 80%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: linear-gradient(
+      90deg,
+      #32CD32 0%,
+      rgb(0, 232, 236) 100%
+    );
+    outline: none;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+  }
