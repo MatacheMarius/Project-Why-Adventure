@@ -19,7 +19,7 @@ function Cards() {
               src='images/img-1.jpg'
               text='Find your favorite places to travel'
               label='Map'
-              path='/map'
+              path='/PlanYourTrip'
             />
           </ul>
           <ul className='cards__items'>

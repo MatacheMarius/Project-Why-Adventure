@@ -1,0 +1,44 @@
+
+
+.form-container {
+    margin: 100px auto;
+    margin-top: 0px;
+    padding-top: 100px;
+    width: 1000px;
+    position: relative;
+    border-radius: 101px;
+    height: 600px;
+    display: grid;
+  }
+
+  .content {
+  background: linear-gradient(
+    90deg,
+    #d34b4bd0 0%,
+    #000000d0 100%
+  );
+  padding-top: 100px;
+  border-radius: 10px 0 0 10px;
+  position: relative;
+  color: white;
+}
+
+
+   h4 {
+  font-size: 1rem;
+  text-align: start;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: #fff;
+  margin-left: 80mm;
+}
+
+.picture {
+  background-image: url('/images/img-7.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color:black;
+  height: 100vh;
+}
+

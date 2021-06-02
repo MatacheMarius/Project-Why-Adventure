@@ -4,6 +4,8 @@ import { signup } from "../utils/userapi";
 import { useLoginContext } from '../utils/GlobalState';
 import { ERROR, LOGIN } from "../utils/actions"
 import SignUpForm from "../components/user/SignUpForm"
+import './Login.css';
+
 
 function SignUp() {
     const [state, dispatch] = useLoginContext();
@@ -36,10 +38,15 @@ function SignUp() {
     }
 
     return (
-        <div className="row px-3">
+        <div  className="picture">
+        <div className="form-container">
+        <div className="row px-4">
+        <div className="content">
             {state.user.user_id ? <h1>You are logged in!</h1> : <h1>You're not logged in!</h1>}
             <div className="col-md-6">
                 <h2>Signup</h2>
+
+              
                 <SignUpForm 
                     usernameRef={usernameRef}
                     signupEmailRef={signupEmailRef}
@@ -47,6 +54,9 @@ function SignUp() {
                     handleSignup={handleSignup}
                 />
             </div>
+        </div>
+        </div>
+        </div>
         </div>
     )
 }
