@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import tripsAPI from "../../utils/tripsAPI";
 
 import "./style.css"
-
+//import @wojtekmaj/react-daterange-picker
+import DateRangePicker from '@wojtekmaj/react-daterange-picker'
 
 function EmployeeModal(props) {
-
+    
+    // handle datePicker state
+    const [value, onChange] = useState([new Date(), new Date()]);
+    
     const showGuide = () => {
        saveGuide()
        props.handleClose()
@@ -19,7 +23,9 @@ function EmployeeModal(props) {
          gender: props.gender,
          experience: props.experience,
          cell: props.cell,
-         email: props.email
+         email: props.email,
+         //add date value
+         dateRange: value
        }
 
      
@@ -60,6 +66,21 @@ function EmployeeModal(props) {
                 </div>
             </Modal.Body>
             <Modal.Footer>
+            {/* add datePicker */}
+            <div>
+                <DateRangePicker 
+                    calendarAriaLabel="Toggle calendar"
+                    clearAriaLabel="Clear value"
+                    dayAriaLabel="Day"
+                    monthAriaLabel="Month"
+                    yearAriaLabel="Year"  
+                    nativeInputAriaLabel="Date"
+                    format="MM-dd-y"
+                    onChange={onChange}
+                    value={value}                   
+                />
+            </div>   
+
             <Button variant="warning"  onClick = {props.next}>
                     Next Guide
                 </Button>

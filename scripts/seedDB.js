@@ -17,6 +17,8 @@ const tripSeed = [
     date: new Date(Date.now()),
     booked: true,
     favorited: false,
+    //added default dateRange
+    dateRange: []
   },
   {
     username: "testerTriper",
@@ -26,6 +28,7 @@ const tripSeed = [
     date: new Date(Date.now()),
     booked: false,
     favorited: true,
+    dateRange: []
   }
 ];
 

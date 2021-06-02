@@ -50,7 +50,12 @@ const tripSchema = new Schema(
          },
     email:{
           type: String,
-         }
+         },
+    //set up to hold an array of two dates
+    dateRange:{
+        type: [String]
+    }
+
 
     
 
