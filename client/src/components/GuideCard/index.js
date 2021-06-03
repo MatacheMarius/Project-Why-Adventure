@@ -20,6 +20,8 @@ import tripsAPI from "../../utils/tripsAPI";
     username: props.name,
     desc: props.description,
     booked: true,
+    right: true,
+
   }
 
   const tripFavorited  = {
@@ -33,7 +35,7 @@ import tripsAPI from "../../utils/tripsAPI";
   function saveTrips() {
     tripsAPI.saveTrip(tripData)
     .then((res) => {
-      console.log(res.data)})
+     })
       .catch(err => console.log(err));
       
   };
@@ -44,7 +46,7 @@ import tripsAPI from "../../utils/tripsAPI";
   function favoriteTrips() {
     tripsAPI.saveTrip(tripFavorited)
     .then((res) => {
-      console.log(res.data)})
+      })
       .catch(err => console.log(err));
       
   };
