@@ -1,12 +1,4 @@
 #background-image {
-    /* background-image: url('/images/img-10.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color:black;
-    height: 100vh;
-    overflow-x:hidden;
-    overflow-y:hidden; */
     background-color: black;
 }
 
@@ -18,7 +10,7 @@
     ); 
     color:white;
     padding-top: 50px;
-    border-radius: 10px;
+    /* border-radius: 10px; */
 }
 
 #heading {
@@ -37,6 +29,7 @@
     margin: 10px;
     border-color: #ca7e95d0; 
     border-width: medium;
+    font-size: 15px;
 }
 
 #link-button:hover {
