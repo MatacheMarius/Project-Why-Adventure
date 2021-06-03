@@ -12,13 +12,19 @@ function Trips() {
 
   // to manage the users logged in status
   const [state, dispatch] = useLoginContext();
-  // don't delete ", dispatch". Will break
+
+  // called in return; used to keep username displayed on refresh
+  function displayName() {
+    console.log(state.user)
+    console.log(state.user.username)
+    return state.user.username
+  }
 
   useEffect(() => {
     loadTrips()
   }, [])
 
-  function loadTrips() {
+  function loadTrips() {   
     tripsAPI.getTrips()
     .then((res) => {
       setTrips(res.data)
@@ -37,16 +43,13 @@ function Trips() {
 
   return ( 
    
-    <Row>
-       
+    <Row>  
       <div>
      
         {/* if the user is logged in, render: */}
-        {state.user.user_id ?
-        
+        {state.user.user_id ? (
           <div>
-            {/* ASK A TA: when I hit refresh, it clears out name? */}
-            {state.user.user_id ? <h1>Welcome back, {state.user.username}</h1> : <h1>You're not logged in!</h1>}
+            <h1>Welcome back, {displayName()}</h1>
             <Col>
               <div>
                 <h2>Booked Adventures</h2>
@@ -69,35 +72,33 @@ function Trips() {
                     <h3>No trips to display</h3>
                   )}
               </div>
-             </Col>
-             <Col>
+            </Col>
+            <Col>
               <div>
-              
                 <h2>Favorite Adventures</h2>
                 {trips.length ? ( <BookedDeck> 
                   {trips.map(trip => ( trip.favorited?
                     <BookedAdventureCard key={trip._id}>
                       <Card>
-                       <Card.Title> <h1>{trip.username} </h1></Card.Title>
-                       <Card.Text>{trip.desc}</Card.Text>
-                    <DeleteBtn onClick={() => deleteTrip(trip._id)} />  
-                    </Card>  
-                  </BookedAdventureCard>
+                        <Card.Title> <h1>{trip.username} </h1></Card.Title>
+                        <Card.Text>{trip.desc}</Card.Text>
+                        <DeleteBtn onClick={() => deleteTrip(trip._id)} />  
+                      </Card>  
+                    </BookedAdventureCard>
                   : null ))}
                 </BookedDeck>
-              ) : (
-              <h3>No trips to display</h3>
-            )}
-      </div>
-      </Col>
-      </div>
+                ) : (
+                  <h3>No trips to display</h3>
+                )}
+              </div>
+            </Col>
+        </div>
    
-               
-          : <h4>Login to see where you're going next!</h4>}
+         // why isn't this rendering when not logged in?      
+        ):( <h4>Login to see where you're going next!</h4> )}
      
-     </div>
-
-     </Row>
+      </div>
+    </Row>
   );
 }
 
