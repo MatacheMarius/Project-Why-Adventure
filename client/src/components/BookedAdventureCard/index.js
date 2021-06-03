@@ -1,5 +1,8 @@
 import React from 'react';
 import {Card, CardDeck} from 'react-bootstrap';
+import {useState, useEffect} from 'react'
+import getInfo from '../../pages/PlanYourTrip'
+import GuideCards from '../GuideCard'
 
 export function BookedDeck({ children }) {
   return (
@@ -26,38 +29,38 @@ export function BookedAdventureCard({ children }) {
 
 
 
-// function BookedAdventureCard() {
-//   const [guide, setAllGuides] = useState(null);
-//   const [isLoading, setIsLoading] = useState(true);
+function BookedAdventureCard2() {
+  const [guide, setAllGuides] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
  
-//   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
 
    
     
-//     useEffect(() => {
-//     getInfo()
-//     .then(response => {
-//       if(response.data){
-//       setAllGuides(response.data.data)
-//       setIsLoading(false);}
+    useEffect(() => {
+    getInfo()
+    .then(response => {
+      if(response.data){
+      setAllGuides(response.data.data)
+      setIsLoading(false);}
       
-//     })
-//     .catch(error=> console.log(error));
+    })
+    .catch(error=> console.log(error));
     
-//     }, [])
+    }, [])
 
-//   console.log(guide);
+  console.log(guide);
 
-//   return (
-//     <div >
-//     <CardDeck className="row " >
-//     {isLoading ? 'Loading' : 
-//     guide.map((el, index) => {
-//     return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} /> }
-//     ) } 
-//     </CardDeck>
-//   </div>
-//   );
-// }
+  return (
+    <div >
+    <CardDeck className="row " >
+    {isLoading ? 'Loading' : 
+    guide.map((el, index) => {
+    return <GuideCards  key = {index} images = {el.images[0]  ?  el.images[0].url : "https://www.nps.gov/common/uploads/structured_data/CAD2D1A7-09C6-7F1B-C8A2D91D6699D14D.jpg"} name = {el.name} /> }
+    ) } 
+    </CardDeck>
+  </div>
+  );
+}
 
-// export default BookedAdventureCard;
+export default BookedAdventureCard;
