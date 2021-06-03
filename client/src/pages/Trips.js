@@ -6,6 +6,7 @@ import tripsAPI from "../utils/tripsAPI";
 import { Row, Col, Card, ListGroupItem, Carousel } from "react-bootstrap";
 import { useLoginContext } from "../utils/GlobalState";
 import guidesAPI from "../utils/guidesAPI";
+var moment = require('moment');
  
 function Trips() {
   const [trips, setTrips] = useState([])
@@ -20,6 +21,29 @@ function Trips() {
     console.log(state.user)
     console.log(state.user.username)
     return state.user.username
+  }
+
+  // format dates
+  // install/import moment.js
+  function formatDates(trip) {
+    var startDate = trip[0].dateRange[0];
+    startDate = moment(startDate).subtract(10, 'days').calendar()
+    var endDate = trip[0].dateRange[1];
+    endDate = moment(endDate).subtract(10, 'days').calendar()
+    console.log(startDate, endDate)
+    // if the start date equals the end date, only one date needs to display
+    if (startDate === endDate){
+      return(
+        <div>
+          {startDate}
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          {startDate} to {endDate}
+        </div>)
+    }  
   }
 
   useEffect(() => {
@@ -94,7 +118,7 @@ function Trips() {
                               <ListGroupItem> <p>Gender: {trip[0].gender}</p>  </ListGroupItem>
                               <ListGroupItem> <p>Email: {trip[0].email}</p>  </ListGroupItem>
                               <ListGroupItem> <p>Phone: {trip[0].cell}</p>  </ListGroupItem>
-                              <ListGroupItem> Date range:  <p>{trip[0].dateRange[0]} to {trip[0].dateRange[1]}</p>  </ListGroupItem>
+                              <ListGroupItem> Booked Date(s):  <p>{formatDates(trip)}</p>  </ListGroupItem>
                             </BookedAdventureCard>
                           ) : null ) } 
                           </div>
