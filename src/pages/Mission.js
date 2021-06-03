@@ -9,7 +9,7 @@ export default function Mission() {
           <div className="card how">
             <div className="card-header">
               <h2>How We Do It</h2>
-              <blockquote class="blockquote">
+              <blockquote className="blockquote">
                 <p className="">“Not all those who wander are lost.”</p>
                 <footer className="blockquote-footer">J.R.R. Tolkien</footer>
               </blockquote>
@@ -28,7 +28,7 @@ export default function Mission() {
         <div className="card why">
             <div className="card-header">
               <h2>Why We Care</h2>
-              <blockquote class="blockquote">
+              <blockquote className="blockquote">
                 <p className="">“I felt my lungs inflate with the onrush of scenery—air, mountains, trees, people.<br></br>I thought, ‘This is what it is to be happy.’”</p>
                 <footer className="blockquote-footer">Sylvia Plath</footer>
               </blockquote>
