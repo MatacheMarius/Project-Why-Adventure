@@ -3,7 +3,7 @@ import {Card, CardDeck} from 'react-bootstrap';
 
 export function BookedDeck({ children }) {
   return (
-    <CardDeck>
+    <CardDeck >
       {children}
     </CardDeck>
   )
@@ -13,7 +13,7 @@ export function BookedDeck({ children }) {
 export function BookedAdventureCard({ children }) {
   return (
       <div>
-             <Card className ="col-4  ">
+             <Card >
               <Card.Body>
                 <Card.Text>{children}</Card.Text>
               </Card.Body>

@@ -10,6 +10,7 @@ import Trips from './pages/Trips';
 import PlanYourTrip from './pages/PlanYourTrip';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Account from "./pages/Account";
+
 // import axios from "axios";
 // import getInfo from './utils/API';
 import { LoginProvider } from './utils/GlobalState'

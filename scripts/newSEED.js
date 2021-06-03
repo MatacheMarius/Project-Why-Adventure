@@ -9,12 +9,12 @@ mongoose.connect(
 );
 
 const tripSeed = [
-  
+
 ];
 
-db.Trip
+db.Guide
   .remove({})
-  .then(() => db.Trip.collection.insertMany(tripSeed))
+  .then(() => db.Guide.collection.insertMany(tripSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");
     process.exit(0);

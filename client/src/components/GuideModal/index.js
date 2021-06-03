@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
-import tripsAPI from "../../utils/tripsAPI";
+
+import guidesAPI from "../../utils/guidesAPI";
 
 import "./style.css"
 //import @wojtekmaj/react-daterange-picker
 import DateRangePicker from '@wojtekmaj/react-daterange-picker'
 
 function EmployeeModal(props) {
-    
+  
     // handle datePicker state
-    const [value, onChange] = useState([new Date(), new Date()]);
+    const [value, onChange] = useState(new Date(), new Date());
     
     const showGuide = () => {
        saveGuide()
@@ -25,22 +26,25 @@ function EmployeeModal(props) {
          cell: props.cell,
          email: props.email,
          //add date value
-         dateRange: value
+         dateRange: value,
+         booked: true
+        
+        
        }
-
+       console.log("value", value)
      
       
      
        function saveGuide() {
-         tripsAPI.saveTrip(tripData)
+         guidesAPI.saveGuide(tripData)
          .then((res) => {
-           console.log(res.data)})
+           })
            .catch(err => console.log(err));
            
        };
      
 
-       console.log(tripData)
+       console.log("tripData", tripData)
 
 
     return ( 
@@ -56,7 +60,7 @@ function EmployeeModal(props) {
                     <div className="col-4"><img src={props.image} alt="portrait" ></img></div>
                     <div className="col-8">
                         Name: {props.namef} {props.namel} <br />
-                        Age: {props.gender} <br />
+                        Gender: {props.gender} <br />
                         Experience: {props.experience} years<br />
                         Cell: {props.cell} <br />
                         Email: {props.email} <br />

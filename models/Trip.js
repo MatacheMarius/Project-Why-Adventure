@@ -34,27 +34,6 @@ const tripSchema = new Schema(
       type: Boolean,
 
     },
-    firstName: {
-      type: String,
-    },
-    lastName: {
-      type: String,},
-    gender: {
-          type: String,
-         },
-    experience: {
-          type: String,
-         },
-    cell: {
-          type: String,
-         },
-    email:{
-          type: String,
-         },
-    //set up to hold an array of two dates
-    dateRange:{
-        type: [String]
-    }
 
 
     
