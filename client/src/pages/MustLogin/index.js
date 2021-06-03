@@ -21,29 +21,29 @@ function MustLogin() {
                 <Carousel.Item className="carousel-item">
                     <img
                     className="d-block w-100"
-                    src="/images/img-10.jpg"
+                    src="/images/img-13.jpg"
                     alt="First slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item className="carousel-item">
                     <img
                     className="d-block w-100"
-                    src="/images/img-12.jpg"
+                    src="/images/img-11.jpg"
                     alt="Second slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item className="carousel-item">
                     <img
                     className="d-block w-100"
-                    src="/images/img-11.jpg"
+                    src="/images/img-10.jpg"
                     alt="Third slide"
                     />
                 </Carousel.Item>
                 <Carousel.Item className="carousel-item">
                     <img
                     className="d-block w-100"
-                    src="/images/img-13.jpg"
-                    alt="Third slide"
+                    src="/images/img-12.jpg"
+                    alt="Fourth slide"
                     />
                 </Carousel.Item>
             </Carousel>  
