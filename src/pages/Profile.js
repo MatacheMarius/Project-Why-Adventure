@@ -20,7 +20,7 @@ export default function Trips() {
           <BookedAdventureCard />
       </div>
     </Col>
-    <div class="col-md-1">
+    <div className="col-md-1">
     </div>
     <Col>     
       <div>

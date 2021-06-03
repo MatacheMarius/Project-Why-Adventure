@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import DeleteBtn from "../components/DeleteBtn";
 import { BookedAdventureCard, BookedDeck } from "../components/BookedAdventureCard"
+import MustLogin from "../pages/MustLogin"
 import tripsAPI from "../utils/tripsAPI";
 import { Row, Col, Card } from "react-bootstrap";
 import { useLoginContext } from "../utils/GlobalState";
@@ -40,66 +41,51 @@ function Trips() {
   }
 
 
-
-  return ( 
-   
-    <Row>  
+  if(state.user.user_id) {
+    return(
       <div>
-     
-        {/* if the user is logged in, render: */}
-        {state.user.user_id ? (
-          <div>
-            <h1>Welcome back, {displayName()}</h1>
-            <Col>
-              <div>
-                <h2>Booked Adventures</h2>
-                    {trips.length ? ( 
-                      <BookedDeck>
-                        {trips.map(trip => ( trip.booked?
-                          <BookedAdventureCard key={trip._id}>
-                            <h1>
-                            {trip.username}
-                            </h1>
-                            <p>
-                              {trip.desc}
-                            </p>
-                          <DeleteBtn onClick={() => deleteTrip(trip._id)} />    
-                        </BookedAdventureCard>
-                        : null))}
-                        
-                      </BookedDeck>
-                    ) : (
-                    <h3>No trips to display</h3>
-                  )}
-              </div>
-            </Col>
-            <Col>
-              <div>
-                <h2>Favorite Adventures</h2>
-                {trips.length ? ( <BookedDeck> 
-                  {trips.map(trip => ( trip.favorited?
+        <Row>
+          <h1>Welcome back, {displayName()}</h1>
+          <Col>
+            <div>
+              <h2>Booked Adventures</h2>
+              {trips.length ? ( 
+              <BookedDeck>
+                {trips.map(trip => ( trip.booked?
                     <BookedAdventureCard key={trip._id}>
-                      <Card>
-                        <Card.Title> <h1>{trip.username} </h1></Card.Title>
-                        <Card.Text>{trip.desc}</Card.Text>
-                        <DeleteBtn onClick={() => deleteTrip(trip._id)} />  
-                      </Card>  
+                      <h1>{trip.username}</h1>
+                      <p>{trip.desc}</p>
+                      <DeleteBtn onClick={() => deleteTrip(trip._id)} />    
                     </BookedAdventureCard>
-                  : null ))}
-                </BookedDeck>
-                ) : (
-                  <h3>No trips to display</h3>
-                )}
-              </div>
-            </Col>
-        </div>
-   
-         // why isn't this rendering when not logged in?      
-        ):( <h4>Login to see where you're going next!</h4> )}
-     
-      </div>
-    </Row>
-  );
+                : null))}  
+              </BookedDeck>
+              ) : ( <h3>No trips to display</h3> )}
+            </div>
+          </Col>
+          <Col>
+            <div>
+              <h2>Favorite Adventures</h2>
+              {trips.length ? ( <BookedDeck> 
+                {trips.map(trip => ( trip.favorited?
+                  <BookedAdventureCard key={trip._id}>
+                    <Card>
+                      <Card.Title> <h1>{trip.username} </h1></Card.Title>
+                      <Card.Text>{trip.desc}</Card.Text>
+                      <DeleteBtn onClick={() => deleteTrip(trip._id)} />  
+                    </Card>  
+                  </BookedAdventureCard>
+                : null ))}
+              </BookedDeck>
+              ) : ( <h3>No trips to display</h3> )}
+            </div>
+          </Col>
+        </Row>
+      </div>)
+  } else {
+      return (
+        <MustLogin />
+      )
+  };
 }
-
+  
 export default Trips

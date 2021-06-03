@@ -1,0 +1,44 @@
+#background-image {
+    background-image: url('/images/img-10.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:black;
+    height: 100vh;
+    overflow-x:hidden;
+    overflow-y:hidden;
+}
+
+#jumbotron {
+    background: linear-gradient(
+        90deg,
+        #d17620d0 0%,
+        #2f4a96a8 100%
+    ); 
+    color:white;
+    padding-top: 50px;
+    border-radius: 10px;
+}
+
+#heading {
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#heading h4 {
+    text-align: center;
+}
+
+#link-button {
+    width: 100%;
+    padding: 10px;
+    margin: 10px;
+    border-color: #88334cd0; 
+    border-width: medium;
+}
+
+#link-button:hover {
+    border-color: #740962d0; 
+    border-width: thick;
+}
