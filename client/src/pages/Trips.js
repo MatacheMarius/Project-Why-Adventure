@@ -57,7 +57,7 @@ function Trips() {
   }
 
 
-<<<<<<< HEAD
+
   function deleteGuide(id) {
     guidesAPI.deleteGuide(id)
     .then(res => loadGuides())
@@ -81,7 +81,7 @@ while(myArr.length > 0) {
   newArray.push(myArr.splice(0,2))
 }
 console.log("newArray = ",newArray)
-
+if (state.user.user_id) {
   return ( 
   
 
@@ -89,7 +89,7 @@ console.log("newArray = ",newArray)
       <div>
      
         {/* if the user is logged in, render: */}
-        {(state.user.user_id && trips.length !==0)?
+        { trips.length !==0 ?
         
           <div>
             {/* ASK A TA: when I hit refresh, it clears out name? */}
@@ -169,53 +169,7 @@ console.log("newArray = ",newArray)
   
    
   );
-=======
-  if(state.user.user_id) {
-    return(
-      <div>
-        <Row>
-          <h1>Welcome back, {displayName()}</h1>
-          <Col>
-            <div>
-              <h2>Booked Adventures</h2>
-              {trips.length ? ( 
-              <BookedDeck>
-                {trips.map(trip => ( trip.booked?
-                    <BookedAdventureCard key={trip._id}>
-                      <h1>{trip.username}</h1>
-                      <p>{trip.desc}</p>
-                      <DeleteBtn onClick={() => deleteTrip(trip._id)} />    
-                    </BookedAdventureCard>
-                : null))}  
-              </BookedDeck>
-              ) : ( <h3>No trips to display</h3> )}
-            </div>
-          </Col>
-          <Col>
-            <div>
-              <h2>Favorite Adventures</h2>
-              {trips.length ? ( <BookedDeck> 
-                {trips.map(trip => ( trip.favorited?
-                  <BookedAdventureCard key={trip._id}>
-                    <Card>
-                      <Card.Title> <h1>{trip.username} </h1></Card.Title>
-                      <Card.Text>{trip.desc}</Card.Text>
-                      <DeleteBtn onClick={() => deleteTrip(trip._id)} />  
-                    </Card>  
-                  </BookedAdventureCard>
-                : null ))}
-              </BookedDeck>
-              ) : ( <h3>No trips to display</h3> )}
-            </div>
-          </Col>
-        </Row>
-      </div>)
-  } else {
-      return (
-        <MustLogin />
-      )
-  };
->>>>>>> origin
+              } else {return (<MustLogin/>)}
 }
   
 export default Trips
