@@ -1,0 +1,35 @@
+.picture1 {
+    background-image: url('/images/img-7.jpg');
+    background-position: center;
+    background-size: cover;
+    color: #000000d0;
+    height: auto;
+    padding-bottom: 1000px;
+    width: 200vh;
+    margin-left: 0px;
+  }
+
+  h1 {
+      color: rgb(8, 8, 8);
+  }
+
+  h2 {
+    color: rgb(255, 255, 255);
+    
+}
+
+.Title {
+  color:white;
+}
+
+.card-body {
+    background: linear-gradient(
+      90deg,
+      #d34b4bd0 0%,
+      #000000d0 100%
+    );
+    padding-top: 100px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    color: #ffffffd0;
+  }

@@ -1,0 +1,9 @@
+.picture {
+    background-image: url('/images/img-7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:black;
+    height: 100vh;
+  }
+  

@@ -1,5 +1,26 @@
-img {
-    display: block;
-    align-self: center;
-    margin-right: 10px
-}
+
+  .col-4 {
+    background: linear-gradient(
+      90deg,
+      #000000d0 0%,
+      #b94e4ed0 100%
+    );
+    padding-top: 100px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    color: white;
+  }
+
+  
+  #background {
+    background: linear-gradient(
+      90deg,
+      #a54848d0 0%,
+      #fffbfbd0 100%
+    );
+    padding-top: 100px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    color: rgb(8, 8, 8);
+  }
+

@@ -8,6 +8,7 @@ import {  Form } from "react-bootstrap";
 import axios from "axios";
 import MustLogin from "../pages/MustLogin";
 import { useLoginContext } from "../utils/GlobalState";
+import './PlanYourTrip.css';
 
 
 export default function Map() {
@@ -64,6 +65,7 @@ export default function Map() {
 
   if(state.user.user_id) {
     return(
+      <div  className="picture">
       <div>
         <div>
         <br/>
@@ -73,7 +75,7 @@ export default function Map() {
               <Form.Group controlId="exampleForm.ControlSelect1">
                 <Form.Label>Search for the State</Form.Label>
                 <Form.Control as="select">  
-                  <option></option>         
+                  <option>Choose a State</option>         
                   <option value = "AL">AL</option>
                   <option value = "AK">AK</option>
                   <option value = "AZ">AZ</option>
@@ -128,6 +130,7 @@ export default function Map() {
               </Form.Group>
             </Form>
           </div>  
+          </div>
         </div> 
         <div>
           <CardDeck className="row " >
@@ -142,6 +145,7 @@ export default function Map() {
           )}
         </div>
       </div>
+      
   )} else {
     return (
       <MustLogin />
