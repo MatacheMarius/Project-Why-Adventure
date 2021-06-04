@@ -71,9 +71,8 @@ export default function Map() {
         <br/>
           <h3 className='selectTitle'>Select A State</h3>
           <div className="stateStyle">
-            <Form value = {input} onChange = {(event) => setInput(event.target.value)} onClick={console.log( input )}> 
+            <form value = {input} onChange = {(event) => setInput(event.target.value)} onClick={console.log( input )}> 
               <Form.Group controlId="exampleForm.ControlSelect1">
-                <Form.Label>Search for the State</Form.Label>
                 <Form.Control as="select">  
                   <option>Choose a State</option>         
                   <option value = "AL">AL</option>
@@ -128,7 +127,7 @@ export default function Map() {
                   <option value = "WY">WY</option>
                 </Form.Control>
               </Form.Group>
-            </Form>
+            </form>
           </div>  
           </div>
         </div> 

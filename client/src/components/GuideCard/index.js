@@ -1,6 +1,7 @@
 import React from "react";
 import {Card, Button} from 'react-bootstrap';
 import tripsAPI from "../../utils/tripsAPI";
+import "./gCard.css"
 
 
   function GuideCards(props) {
@@ -62,12 +63,12 @@ import tripsAPI from "../../utils/tripsAPI";
               <Card.Footer>
                {props.regulation}
               </Card.Footer>
-              <Button variant="success"  onClick = {showBooked} >
+              <button className="bookBtn"  onClick = {showBooked} >
                     Book!
-                </Button>
-                <Button variant="danger"onClick = {showFavorited} >
+              </button>
+              <button className="favBtn" onClick = {showFavorited} >
                     Add to Favorites
-                </Button>
+              </button>
             </Card>
            
         );
