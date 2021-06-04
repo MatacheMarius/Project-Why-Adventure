@@ -1,9 +1,10 @@
 .cards {
   padding: 4rem;
   background: transparent;
+  color: #fff;
 }
 
-h1 {
+.white {
   text-align: center;
   color: white;
 }
@@ -16,6 +17,7 @@ h1 {
   width: 90%;
   margin: 0 auto;
   background-color: transparent;
+  color: #fff;
 }
 
 .cards__wrapper {
