@@ -98,7 +98,7 @@ function Trips() {
   }
   console.log("newArray = ",newArray)
 
-  if(state.user.user_id) {
+  if(state.user.user_id && trips.length > 0) {
     return(
       <div>
         <div  className="picture1">
