@@ -5,6 +5,10 @@
   font-family: 'PT Sans', sans-serif;
 }
 
+#root {
+  background-color: #000000d0;
+}
+
 .stateStyle{
   margin-left: 45%;
   margin-bottom: 15px;
@@ -69,7 +73,7 @@
 }
 
 .featured{
-  background-color: whitesmoke;
+  background-color: transparent;
   text-align: center;
   color:black;
   padding-top: 70px;

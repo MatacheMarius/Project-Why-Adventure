@@ -1,10 +1,11 @@
 .cards {
   padding: 4rem;
-  background: #fff;
+  background: transparent;
 }
 
 h1 {
   text-align: center;
+  color: white;
 }
 
 .cards__container {
@@ -14,11 +15,13 @@ h1 {
   max-width: 1120px;
   width: 90%;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .cards__wrapper {
   position: relative;
   margin: 50px 0 45px;
+  background-color: transparent;
 }
 
 .cards__items {
@@ -30,6 +33,7 @@ h1 {
   flex: 1;
   margin: 0 1rem;
   border-radius: 10px;
+  background-color: whitesmoke;
 }
 
 .cards__item__link {
