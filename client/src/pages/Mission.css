@@ -1,0 +1,24 @@
+
+.services {
+    background-image: url('/images/img-7.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:black;
+    height: 90vh;
+  }
+
+  .card-header {
+    background: linear-gradient(
+      90deg,
+      #000000d0 0%,
+      #000000d0 100%
+    );
+    padding-top: 100px;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+    color: rgb(255, 255, 255);
+  }
+  .footer {
+    color: rgb(255, 255, 255);
+  }

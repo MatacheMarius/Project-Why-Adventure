@@ -3,6 +3,7 @@ import {Card, CardDeck} from 'react-bootstrap';
 import {useState, useEffect} from 'react'
 import getInfo from '../../pages/PlanYourTrip'
 import GuideCards from '../GuideCard'
+import './style.css';
 
 export function BookedDeck({ children }) {
   return (

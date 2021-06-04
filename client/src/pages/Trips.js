@@ -6,7 +6,9 @@ import tripsAPI from "../utils/tripsAPI";
 import { Row, Col, Card, ListGroupItem, Carousel } from "react-bootstrap";
 import { useLoginContext } from "../utils/GlobalState";
 import guidesAPI from "../utils/guidesAPI";
+import './Trips.css';
 var moment = require('moment');
+
  
 function Trips() {
   const [trips, setTrips] = useState([])
@@ -99,6 +101,7 @@ function Trips() {
   if(state.user.user_id) {
     return(
       <div>
+        <div  className="picture1">
         <h1>Welcome, {displayName()}</h1>
             <Row>
               <Col sm={6}>
@@ -147,8 +150,11 @@ function Trips() {
                   <h3>No trips to display</h3>
                   )}
                 </div>
+                
               </Col>
+              
             </Row> 
+             </div>
       </div>)
   } else {
       return (
