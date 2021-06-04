@@ -49,13 +49,11 @@ function EmployeeModal(props) {
 
     return ( 
         
-        <Modal  animation show={props.isOpen} onHide={props.handleClose}
-        
-        >
-            <Modal.Header closeButton >
+        <Modal  animation show={props.isOpen} onHide={props.handleClose}>
+            <Modal.Header closeButton  className="cardModal" >
                 <Modal.Title>Choose your guide!</Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body  className="cardModal">
                 <div className="row">
                     <div className="col-4"><img src={props.image} alt="portrait" ></img></div>
                     <div className="col-8">
@@ -69,7 +67,7 @@ function EmployeeModal(props) {
                     </div>
                 </div>
             </Modal.Body>
-            <Modal.Footer>
+            <Modal.Footer className='footStuff'>
             {/* add datePicker */}
             <div>
                 <DateRangePicker 
@@ -85,12 +83,12 @@ function EmployeeModal(props) {
                 />
             </div>   
 
-            <Button variant="warning"  onClick = {props.next}>
+            <button className="nxtBtn"  onClick = {props.next}>
                     Next Guide
-                </Button>
-                <Button variant="success" onClick = {showGuide}  >
+                </button>
+                <button className="anotherBookBtn"  onClick = {showGuide}  >
                     Book!
-                </Button>
+                </button>
                
             </Modal.Footer>
         </Modal>

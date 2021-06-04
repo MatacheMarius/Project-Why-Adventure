@@ -6,4 +6,7 @@
     color:black;
     height: 100vh;
   }
-  
+  .form-control{
+    
+    margin-top: 10px;
+  }
