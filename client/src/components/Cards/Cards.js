@@ -5,7 +5,7 @@ import CardItem from '../CardItem';
 function Cards() {
   return (
     <div className='cards'>
-      <h1>Check out these EPIC Destinations!</h1>
+      <h1>Check out what we have to offer!</h1>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -13,34 +13,34 @@ function Cards() {
               src='images/img-9.jpg'
               text='Come with us to discover the world'
               label='Adventure'
-              path='/mission'
+              path='/PlanYourTrip'
             />
             <CardItem
               src='images/img-1.jpg'
-              text='Find your favorite places to travel'
-              label='Map'
-              path='/PlanYourTrip'
+              text='Learn about our mission'
+              label='Explore'
+              path='/mission'
             />
           </ul>
           <ul className='cards__items'>
             <CardItem
               src='images/img-3.jpg'
-              text='Do you like mystery? Come with us in a BLIND TRIP'
-              label='Mystery'
-              path='/mission'
+              text='Sign up and find out Why you Adventure'
+              label='Join'
+              path='/signup'
             />
           
             <CardItem
               src='images/img-8.jpg'
-              text="Dou like new experiences? let's see what you can do."
-              label='Adrenaline'
-              path='/mission'
+              text="Check out the trips you already booked or favorited!"
+              label='Future Experiences'
+              path='/trips'
             />
              <CardItem
                src='images/img-2.jpg'
-               text='Discover new friends'
-               label='Friends'
-               path='/mission'
+               text='Login in to see your plans'
+               label='Login'
+               path='/login'
             />
           </ul>
         </div>

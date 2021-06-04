@@ -6,7 +6,7 @@ import Footer from '../components/Footer/Footer';
 
 function Home() {
   return (
-    <>
+    <div>
       <HeroSection />
       <div className="featured">
         <div className="container trips">
@@ -14,7 +14,7 @@ function Home() {
         </div>
       </div>
       <Footer />
-    </>
+    </div>
   );
 }
 
