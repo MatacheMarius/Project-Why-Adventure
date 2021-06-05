@@ -7,6 +7,7 @@ import { Row, Col, Card, ListGroupItem, Carousel } from "react-bootstrap";
 import { useLoginContext } from "../utils/GlobalState";
 import guidesAPI from "../utils/guidesAPI";
 import './Trips.css';
+import Footer from '../components/Footer/Footer';
 var moment = require('moment');
 
  
@@ -155,6 +156,7 @@ function Trips() {
               
             </Row> 
              </div>
+             <Footer />
       </div>)
   } else {
       return (

@@ -5,6 +5,7 @@ import { useLoginContext } from '../utils/GlobalState';
 import { ERROR, LOGIN } from "../utils/actions"
 import SignUpForm from "../components/user/SignUpForm"
 import './Login.css';
+import Footer from '../components/Footer/Footer';
 
 
 function SignUp() {
@@ -57,6 +58,7 @@ function SignUp() {
         </div>
         </div>
         </div>
+        <Footer />
         </div>
     )
 }
