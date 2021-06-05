@@ -19,9 +19,13 @@
 
 
 ### Images:
+Homepage:
 ![demo-image-home](./images/hompage.jpeg) 
+Plan Your Trip page:
 ![demo-image-form](./images/PlanYourTrip.jpeg) 
+Trips page:
 ![demo-image-form](./images/Trip.jpeg) 
+Login page:
 ![demo-image-form](./images/Login.jpeg) 
 
 
