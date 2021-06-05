@@ -7,25 +7,20 @@ import { Row, Col, Card, ListGroupItem, Carousel } from "react-bootstrap";
 import { useLoginContext } from "../utils/GlobalState";
 import guidesAPI from "../utils/guidesAPI";
 import './Trips.css';
-import Footer from '../components/Footer/Footer';
 var moment = require('moment');
-
  
 function Trips() {
   const [trips, setTrips] = useState([])
   const [guides, setGuides] = useState([])
   // const [formObject, setFormObject] = useState({})
-
   // to manage the users logged in status
   const [state, dispatch] = useLoginContext();
-
   // called in return; used to keep username displayed on refresh
   function displayName() {
     console.log(state.user)
     console.log(state.user.username)
     return state.user.username
   }
-
   // format dates
   // install/import moment.js
   function formatDates(trip) {
@@ -48,12 +43,10 @@ function Trips() {
         </div>)
     }  
   }
-
   useEffect(() => {
     loadTrips()
     loadGuides()
   }, [])
-
   function loadTrips() {   
     tripsAPI.getTrips()
     .then((res) => {
@@ -62,7 +55,6 @@ function Trips() {
       .catch(err => console.log(err));
       
   };
-
   function loadGuides() {
     guidesAPI.getGuides()
     .then((res) => {
@@ -71,19 +63,16 @@ function Trips() {
       .catch(err => console.log(err));
       
   };
-
   function deleteTrip(id) {
     tripsAPI.deleteTrip(id)
     .then(res => loadTrips())
     .catch(err => console.log(err));
   }
-
   function deleteGuide(id) {
     guidesAPI.deleteGuide(id)
     .then(res => loadGuides())
     .catch(err => console.log(err));
   }
-
   const y = trips.filter(booked => booked.booked === true)
   console.log("guides = ", guides)
   console.log("y = ", y)
@@ -114,8 +103,8 @@ function Trips() {
                           <div>
                           {newArray.map(trip => (trip.length === 2) ? (
                             <BookedAdventureCard  >
-                              <h1>{trip[1].username}</h1> 
-                              <p>{trip[1].desc}</p> 
+                              <h1>{trips[1].username}</h1> 
+                              <p>{trips[1].desc}</p> 
                               <h2>For more info contact your booked guide: </h2>
                               <ListGroupItem> <p>Name: {trip[0].firstName} {trip[0].lastName}</p> </ListGroupItem>
                               <ListGroupItem>  <p>Experience: {trip[0].experience}</p>  </ListGroupItem>
@@ -156,7 +145,6 @@ function Trips() {
               
             </Row> 
              </div>
-             <Footer />
       </div>)
   } else {
       return (
