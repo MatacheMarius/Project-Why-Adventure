@@ -15,6 +15,25 @@
    
 ### About the project:
 
+WHY ADVENTURE is an app for travelers who want a more unique,
+local experience in their next holiday or getaway.
+Within the application, you can browse destinations
+and view pertinent travel information. Once you know where you want to go
+it is time to pick your dates, and move on to guide selection. 
+The platform creates an easy interface for users to connect
+with locals where they’d like to go.
+
+This app is a React based app with a MondoDB. 
+
+Libraries
+* Bootstrap
+* Moment.js
+* DateRangePicker
+* Axios
+* Concurrently
+* Nodemon
+* If-env
+* Bcrypt
 
 
 
@@ -81,9 +100,10 @@ Login page:
 * https://github.com/obrienceob
 * https://github.com/ShaylaStevenson
 * https://github.com/Jrekse
+* https://github.com/SanduCorobcenco
 
 ### GitHub Repo
 * https://github.com/MatacheMarius/Project-Why-Adventure
 ### Heroku:
-* http://obscure-garden-69449.herokuapp.com/
+* https://boiling-garden-68893.herokuapp.com/
 
