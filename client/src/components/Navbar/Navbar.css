@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: fixed;
   width: 100%;
   z-index: 999;
 }
@@ -15,7 +14,6 @@
   justify-content: center;
   align-items: center;
   height: 80px;
-  position: fixed;
   background-color: #000000d0;
   width: 100%;
   z-index: 999;

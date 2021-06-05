@@ -19,10 +19,10 @@
 
 
 ### Images:
-![demo-image-home](./img/demo-image-home.png) 
-![demo-image-form](./img/demo-img-form.png) 
-![demo-image-form](./img/demo-img-form.png) 
-![demo-image-form](./img/demo-img-form.png) 
+![demo-image-home](./images/hompage.jpeg) 
+![demo-image-form](./images/PlanYourTrip.jpeg) 
+![demo-image-form](./images/Trip.jpeg) 
+![demo-image-form](./images/Login.jpeg) 
 
 
 ### Instalation:
