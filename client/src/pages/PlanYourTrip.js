@@ -9,6 +9,7 @@ import axios from "axios";
 import MustLogin from "../pages/MustLogin";
 import { useLoginContext } from "../utils/GlobalState";
 import './PlanYourTrip.css';
+import Footer from '../components/Footer/Footer';
 
 
 export default function Map() {
@@ -143,6 +144,7 @@ export default function Map() {
               return < EmployeeModal key ={index} isOpen = {isOpen}   image = {el.picture.large}  namef = {el.name.first} namel = {el.name.last} gender = {el.gender} age={el.dob.age} experience = {el.registered.age} cell={el.cell}  email={el.email} handleClose = {handleClose} next = {gotNextGuide} />  }
           )}
         </div>
+        <Footer />
       </div>
       
   )} else {
